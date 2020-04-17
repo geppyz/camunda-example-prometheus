@@ -35,12 +35,6 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-
-            <dependency>
-                <groupId>io.digitalstate.camunda.prometheus</groupId>
-                <artifactId>camunda-prometheus-metrics-process-engine-plugin</artifactId>
-                <version>v0.8</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
