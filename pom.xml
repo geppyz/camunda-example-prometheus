@@ -65,10 +65,27 @@
             <version>1.16.22</version>
         </dependency>
         <dependency>
-            <groupId>io.digitalstate.camunda.prometheus</groupId>
-            <artifactId>camunda-prometheus-metrics-process-engine-plugin</artifactId>
+            <groupId>com.github.StephenOTT</groupId>
+            <artifactId>camunda-prometheus-process-engine-plugin</artifactId>
+            <version>1.8.0</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <layout>default</layout>
+            <url>https://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

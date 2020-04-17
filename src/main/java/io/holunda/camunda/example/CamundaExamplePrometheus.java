@@ -1,6 +1,6 @@
 package io.holunda.camunda.example;
 
-import io.digitalstate.camunda.prometheus.PrometheusProcessMetricsProcessEnginePlugin;
+import io.digitalstate.camunda.prometheus.PrometheusProcessEnginePlugin;
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,8 +14,8 @@ public class CamundaExamplePrometheus {
     }
 
     @Bean
-    PrometheusProcessMetricsProcessEnginePlugin prometheusProcessMetricsProcessEnginePlugin() {
-        final PrometheusProcessMetricsProcessEnginePlugin plugin = new PrometheusProcessMetricsProcessEnginePlugin();
+    PrometheusProcessEnginePlugin prometheusProcessMetricsProcessEnginePlugin() {
+        final PrometheusProcessEnginePlugin plugin = new PrometheusProcessEnginePlugin();
         plugin.setCollectorYmlFilePath("prometheus-metrics.yml");
         plugin.setCamundaReportingIntervalInSeconds("5");
         plugin.setPort("9999");
