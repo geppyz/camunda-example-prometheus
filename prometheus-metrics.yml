@@ -4,19 +4,19 @@
 system:
 - collector: io.digitalstate.camunda.prometheus.collectors.camunda.BpmnExecution
   enable: true
-  startDate: 2015-10-03T17:59:38+00:00
+  startDate: 2020-04-20T17:59:38+00:00
   endDate: now
   startDelay: 0
   frequency: 5000
 - collector: io.digitalstate.camunda.prometheus.collectors.camunda.DmnExecution
   enable: true
-  startDate: 2015-10-03T17:59:38+00:00
+  startDate: 2020-04-20T17:59:38+00:00
   endDate: now
   startDelay: 0
   frequency: 5000
 - collector: io.digitalstate.camunda.prometheus.collectors.camunda.JobExecutor
   enable: true
-  startDate: 2015-10-03T17:59:38+00:00
+  startDate: 2020-04-20T17:59:38+00:00
   endDate: now
   startDelay: 0
   frequency: 5000
@@ -26,6 +26,15 @@ system:
 #  enable: true
 #  startDelay: 0
 #  frequency: 5000
+
+durationTracking:
+  activity_instance_duration:
+    help: "Core activity instance duration tracking. Used to track all activity instances."
+    buckets: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 2.0, 3.0]
+  process_instance_duration:
+    help: "The generic process instance duration buckets"
+    buckets: [1, 5, 10, 15, 20, 30, 60, 120, 300, 600, 1200, 2400]
+
 #- collector: /customcollectors/BpmnProcessDefinition.groovy
 #  enable: true
 #  startDelay: 0

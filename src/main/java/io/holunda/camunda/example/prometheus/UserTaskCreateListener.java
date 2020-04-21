@@ -12,11 +12,11 @@ import java.util.Collections;
 @Component
 public class UserTaskCreateListener implements TaskListener {
 
-    private static final SimpleCounterMetric counter = new SimpleCounterMetric("userTaskCreated", "Number of created User Tasks", Collections.singletonList("taskType"));
+    private static final SimpleCounterMetric counter = new SimpleCounterMetric("active_unassigned_user_tasks_count", "Number of created User Tasks", Collections.singletonList("taskType"));
 
     @Override
     public void notify(DelegateTask delegateTask) {
-        log.info("XXXXX A task has been created!");
+        log.info("A user task has been created!");
         counter.increment(Collections.singletonList(delegateTask.getTaskDefinitionKey()));
     }
 }

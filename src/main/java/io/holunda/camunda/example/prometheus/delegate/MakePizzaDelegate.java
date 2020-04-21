@@ -15,7 +15,7 @@ import static java.lang.String.format;
 @Component("makePizza")
 public class MakePizzaDelegate implements JavaDelegate {
 
-    private static final List<String> supportedPizzas = Arrays.asList("funhgi", "salami");
+    private static final List<String> supportedPizzas = Arrays.asList("funghi", "salami", "magherita", "doner");
 
     @Override
     public void execute(DelegateExecution execution) {
