@@ -14,3 +14,7 @@
 
 * Prometheus: <http://localhost:9090>
 * Example app's Prometheus export endpoint: <http://localhost:9999/metrics>
+
+### Grafana screenshot
+
+![Grafana Dashboard](img/dashboard-preview.png)
